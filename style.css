@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    overflow: hidden;
+}
+.sky {
+    height: 120vh;
+    width: 200vw;
+    background-repeat: no-repeat;
+    background-image: url('background.jpg');
+    background-size: cover;
+    animation: shakeBody linear 1s infinite;
+}
+
+.trees {
+    height: 100vh;
+    width: 800vw;
+    background-image: url('trees.png');
+    /* background-size: cover; */
+    position: absolute;
+    bottom: 300px;
+    animation: tressMove linear 120s infinite;
+}
+
+.track {
+    height: 60vh;
+    width: 800vw;
+    background-image: url('track.png');
+    /* background-size: cover; */
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation: trackMove linear 1s infinite;
+}
+
+.car {
+    height: 100px;
+    width: 323px;
+    background-image: url('car_body.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 440px;
+    left: 150px;
+    animation: shake linear 3s infinite;
+}
+
+.wheel1 img {
+    width: 55px;
+    position: relative;
+    top: 41px;
+    left: 48px;
+    animation: wheelRotation linear .2s infinite;
+}
+.wheel2 img {
+    width: 61px;
+    position: relative;
+    top: -17px;
+    left: 222px;
+    animation: wheelRotation linear .2s infinite;
+}
+.wheelX1 img{
+    position: relative;
+    width: 86px;
+    top: 84px;
+    left: 17px;
+    animation: wheelRotation linear .1s infinite;
+}
+.wheelX2 img{
+    position: relative;
+    width: 99px;
+    top: -20px;
+    left: 187px;
+    animation: wheelRotation linear .1s infinite;
+}
+.biker{
+    background-image: url('bikerX.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100px;
+    width: 323px;
+    left: 700px;
+    top: 380px;
+    animation: Bikeshake linear 3s infinite;
+}
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes tressMove {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes trackMove {
+    100%{
+        transform: translateX(-300vw);
+    }
+}
+@keyframes shake {
+    0%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+@keyframes Bikeshake {
+    0%{
+        transform: translateX(-15px);
+    }
+    50%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+@keyframes shakeBody {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
